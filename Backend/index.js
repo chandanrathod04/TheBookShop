@@ -3,6 +3,7 @@ import mysql from "mysql";
 import cors from "cors";
 
 
+
 const app= express()
 app.use(cors())
 
@@ -14,9 +15,8 @@ const db= mysql.createConnection({
     database:"books"
 })
 
-app.get("/",(req,res)=>{
-res.json("hello this is the backend")
-})
+
+  
 
 app.get("/books",(req,res)=>{
     const q= "SELECT * FROM  books"
